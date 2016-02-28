@@ -25,7 +25,7 @@ void reverse_fp(SNDFILE* out, SNDFILE* in, int channels, int frames) {
         for (j = 0; j < channels; j++) {
             int lower = i + j;
             int higher = len - i + j - channels;
-            int temp = data[lower];
+            double temp = data[lower];
             data[lower] = data[higher];
             data[higher] = temp;
         }
